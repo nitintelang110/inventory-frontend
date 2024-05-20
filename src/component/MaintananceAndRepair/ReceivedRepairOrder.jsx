@@ -24,7 +24,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
 
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/received_inprocess_order").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/received_inprocess_order").then(result=>{
       if (result.data.Status) {
   
         setOrder(result.data.Result)
@@ -41,7 +41,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
   
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/delete_rcd_repair_Order/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/delete_rcd_repair_Order/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({

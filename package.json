@@ -1,7 +1,7 @@
 {
   "name": "inventory-frontend",
   "private": true,
-  "proxy": "https://inventory-backend-delta-ten.vercel.app",
+  "proxy": "https://inventory-backend-delta-ten.vercel.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

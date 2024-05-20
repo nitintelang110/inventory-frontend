@@ -72,7 +72,7 @@ const handleSubmit = (e)=>{
    
   }
   
-axios.put('http://localhost:8000/auth/repair_process_table_update/'+ orderId, data)
+axios.put('https://inventory-backend-delta-ten.vercel.app/auth/repair_process_table_update/'+ orderId, data)
 
   //we should not send file from front end without this code bcoz file always use form data object so we cant send file without this so that why we need for all input bcoz file also going with this input
   const formData = new FormData();
@@ -90,7 +90,7 @@ axios.put('http://localhost:8000/auth/repair_process_table_update/'+ orderId, da
     formData.append('order_no',orderData.order_no);
     formData.append('image', orderData.image);
    //end form data
-  axios.post('http://localhost:8000/auth/received_repair_product', formData)
+  axios.post('https://inventory-backend-delta-ten.vercel.app/auth/received_repair_product', formData)
  
    .then(result =>{
      if (result.data.Status) {
@@ -113,7 +113,7 @@ return alert(result.data.Error)
 
 
      //getting order product here
-    axios.get("http://localhost:8000/auth/get_repair_order/"+ids).then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/get_repair_order/"+ids).then(result=>{
       if (result.data.Status) {
   
         setOrderData((result.data.Result[0]))
@@ -128,7 +128,7 @@ return alert(result.data.Error)
 
 
   //getting order product category here
-    axios.get("http://localhost:8000/auth/addcategory").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
       if (result.data.Status) {
   
         setCategory((result.data.Result))
@@ -138,7 +138,7 @@ return alert(result.data.Error)
   
     }).catch(err => console.log(err))
 //getting order product party here
-    axios.get("http://localhost:8000/auth/party").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
       if (result.data.Status) {
   
         setPartyData((result.data.Result))

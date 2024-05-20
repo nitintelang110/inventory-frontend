@@ -67,7 +67,7 @@ const MaintananceAndRepair = () => {
 
   const sendDataToServer = async () => {
     try {
-       await axios.post('http://localhost:8000/auth/add_repair', formData).then((Status) => {
+       await axios.post('https://inventory-backend-delta-ten.vercel.app/auth/add_repair', formData).then((Status) => {
         if (Status) {
              Swal.fire({ position:"center", icon: "success", title: "Submit Successfully!", timer: 1800, showConfirmButton: false });
                Navigate("/auth/admin/dashboard/repair_process")
@@ -83,7 +83,7 @@ const MaintananceAndRepair = () => {
 
 
   useEffect(()=>{
-    axios.get("http://localhost:8000/auth/addcategory").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
       if (result.data.Status) {
   
         setCategory((result.data.Result))
@@ -93,7 +93,7 @@ const MaintananceAndRepair = () => {
   
     }).catch(err => console.log(err))
 
-    axios.get("http://localhost:8000/auth/party").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
       if (result.data.Status) {
   
         setPartyData((result.data.Result))

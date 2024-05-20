@@ -284,7 +284,7 @@ export const ReceivedProduct = () => {
 
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/receivedproducts").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/receivedproducts").then(result=>{
       if (result.data.Status) {
   
         setEmployee((result.data.Result))
@@ -299,7 +299,7 @@ export const ReceivedProduct = () => {
   
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/deletereceivedproduct/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/deletereceivedproduct/"+id).then(result => {
       if (result.data.Status) {
        Swal.fire({
   title: "Are you sure?",

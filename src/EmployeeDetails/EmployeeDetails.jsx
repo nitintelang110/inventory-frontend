@@ -15,7 +15,7 @@ const EmployeeDetails = () => {
 
   //for user logout
 const handleLogOut =()=>{
-  axios.get('http://localhost:8000/employee/logout').then((result)=>{
+  axios.get('https://inventory-backend-delta-ten.vercel.app/employee/logout').then((result)=>{
     if (result.data.Status) {
       //remove cockies from storage when we log out
        localStorage.removeItem("valid")
@@ -25,7 +25,7 @@ const handleLogOut =()=>{
 }
 
   useEffect(() => {
-    axios.get('http://localhost:8000/employee/employeeDetails/' + id).then((result) => {
+    axios.get('https://inventory-backend-delta-ten.vercel.app/employee/employeeDetails/' + id).then((result) => {
      setEmployeeDetails(result.data[0])
     }).catch((err) => {
         alert(err)
@@ -41,7 +41,7 @@ const handleLogOut =()=>{
        <h4>Employee Number : 0{employeeDetails.id} </h4> 
       </div>
       <div  className='emp_img_container'>
-        <img src={`http://localhost:8000/images/`+employeeDetails.image} alt="" className='emp_det_image' />
+        <img src={`https://inventory-backend-delta-ten.vercel.app/images/`+employeeDetails.image} alt="" className='emp_det_image' />
 
         <div className='emp_info_details'>
           <h3>Name :{employeeDetails.name}</h3>

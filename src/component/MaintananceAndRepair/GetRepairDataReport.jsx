@@ -25,7 +25,7 @@ const id = useParams();
 
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/get_repair_process").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/get_repair_process").then(result=>{
       if (result.data.Status) {
   
         setOrder((result.data.Result))
@@ -40,7 +40,7 @@ const id = useParams();
   
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/deleteRepairOrder/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/deleteRepairOrder/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({

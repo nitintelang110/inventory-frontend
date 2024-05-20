@@ -261,7 +261,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
    
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/getorder").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/getorder").then(result=>{
       if (result.data.Status) {
   
         setOrder(result.data.Result)
@@ -274,7 +274,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
 
 
 
-      axios.get("http://localhost:8000/auth/receivedproducts").then(result=>{
+      axios.get("https://inventory-backend-delta-ten.vercel.app/auth/receivedproducts").then(result=>{
       if (result.data.Status) {
   
        setReceivedProduct((result.data.Result[0]))
@@ -289,7 +289,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
   
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/deleteOrder/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/deleteOrder/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({

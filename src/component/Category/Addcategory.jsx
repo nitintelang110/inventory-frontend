@@ -18,7 +18,7 @@ export const Addcategory = () => {
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
-await axios.post("http://localhost:8000/auth/addcategory", {category})
+await axios.post("https://inventory-backend-delta-ten.vercel.app/auth/addcategory", {category})
 .then(res =>{
   if(res.data.Status){
     Swal.fire({ position: "middle", icon: "success", title: "Added Successfully!", timer: 1800, showConfirmButton: false });

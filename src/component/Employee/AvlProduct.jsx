@@ -286,7 +286,7 @@ export const AvlProduct = () => {
 
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/avl_product").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/avl_product").then(result=>{
       if (result.data.Status) {
   
         setEmployee((result.data.Result))
@@ -301,7 +301,7 @@ export const AvlProduct = () => {
   
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/delete_avl_product/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/delete_avl_product/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({

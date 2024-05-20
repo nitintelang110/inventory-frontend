@@ -59,7 +59,7 @@ export const OutOfStock = () => {
   
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/outofstock_product").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/outofstock_product").then(result=>{
       if (result.data.Status) {
   
         setOutofstock((result.data.Result))
@@ -75,7 +75,7 @@ export const OutOfStock = () => {
 
   const handleDelete = (id) => {
   
-    axios.delete("http://localhost:8000/auth/delete_outofstock_product/"+id).then(result => {
+    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/delete_outofstock_product/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({

@@ -10,7 +10,7 @@ export const Profile = () => {
   
     useEffect(()=>{
 
-    axios.get("http://localhost:8000/auth/adminname").then(result => {
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/adminname").then(result => {
     
     if (result.data.Status) {
 

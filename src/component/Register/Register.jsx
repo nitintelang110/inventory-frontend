@@ -39,7 +39,7 @@ export const Register = () => {
        email: values.email,
        passward:values.passward
      }
-      axios.post("http://localhost:8000/auth/register", data)
+      axios.post("https://inventory-backend-delta-ten.vercel.app/auth/register", data)
         .then(result => {
           
           if (result.data.Status) {  //taking this status from backend if its match then open dashboard other wise send error which we set in backend

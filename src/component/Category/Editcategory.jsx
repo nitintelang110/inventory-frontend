@@ -20,7 +20,7 @@ export const Editcategory =()=>{
 
 useEffect(()=>{
 
-  axios.get("http://localhost:8000/auth/editcategory/"+id).then(result=>{
+  axios.get("https://inventory-backend-delta-ten.vercel.app/auth/editcategory/"+id).then(result=>{
     
  setCategory(result.data.Result)
   }).catch(err => console.log(err))
@@ -30,7 +30,7 @@ console.log(category)
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  axios.put("http://localhost:8000/auth/editedcategory/" + id,  {category} )
+  axios.put("https://inventory-backend-delta-ten.vercel.app/auth/editedcategory/" + id,  {category} )
     .then(result =>{if(result){
       Swal.fire({ position: "middle", icon: "success", title: "Added Successfully!", timer: 1800, showConfirmButton: false });
     } })

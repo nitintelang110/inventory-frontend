@@ -19,7 +19,7 @@ export const Admin = () => {
   axios.defaults.withCredentials = true;
 
 const handleLogout =()=>{
-  axios.get('http://localhost:8000/auth/logout').then((result)=>{
+  axios.get('https://inventory-backend-delta-ten.vercel.app/auth/logout').then((result)=>{
     if (result.data.Status) {
 
         Swal.fire({
@@ -50,7 +50,7 @@ const handleLogout =()=>{
 
   useEffect(()=>{
 
-    axios.get("http://localhost:8000/auth/adminname").then(result => {
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/adminname").then(result => {
     
     if (result.data.Status) {
 

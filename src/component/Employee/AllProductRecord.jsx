@@ -11,7 +11,7 @@ export const AllProductRecord = () => {
  
   useEffect(()=>{
   
-    axios.get("http://localhost:8000/auth/receivedproducts").then(result=>{
+    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/receivedproducts").then(result=>{
       if (result.data.Status) {
   
         setReceivedItem((result.data.Result));
@@ -24,7 +24,7 @@ export const AllProductRecord = () => {
     }).catch(err => console.log(err))
 
 
-     axios.get("http://localhost:8000/auth/givenproducts").then(result=>{
+     axios.get("https://inventory-backend-delta-ten.vercel.app/auth/givenproducts").then(result=>{
       if (result.data.Status) {
   
         setSuplyItem((result.data.Result));
