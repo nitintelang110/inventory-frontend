@@ -22,7 +22,7 @@ export const UserLogin = () => {
       email:email.email,
       password:password.password
     }
-     axios.post("https://inventory-backend-delta-ten.vercel.app/employee/employeelogins", values)
+     axios.post("http://localhost:8000/employee/employeelogins", values)
         .then(result => {
           if (result.data.loginStatus) {  //taking this status from backend if its match then open dashboard other wise send error which we set in backend
             //access only when we login valid

@@ -23,7 +23,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
    
   useEffect(()=>{
   
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/getorder").then(result=>{
+    axios.get("http://localhost:8000/auth/getorder").then(result=>{
       if (result.data.Status) {
   
       setOrder(result.data.Result)  
@@ -35,7 +35,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 
 
-      axios.get("https://inventory-backend-delta-ten.vercel.app/auth/receivedTotalReceivedAmount").then(result=>{
+      axios.get("http://localhost:8000/auth/receivedTotalReceivedAmount").then(result=>{
       if (result.data.Status) {
   
       

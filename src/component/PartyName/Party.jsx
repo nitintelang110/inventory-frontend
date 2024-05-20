@@ -12,7 +12,7 @@ export const Party = () => {
 
 useEffect(()=>{
 
-  axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
+  axios.get("http://localhost:8000/auth/party").then(result=>{
     if (result.data.Status) {
 
       setParty((result.data.Result))
@@ -26,7 +26,7 @@ useEffect(()=>{
  
   const handleDelete = (id) => {
      
-    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/delete_party/"+id).then(result => {
+    axios.delete("http://localhost:8000/auth/delete_party/"+id).then(result => {
       if (result.data.Status) {
      
         Swal.fire({

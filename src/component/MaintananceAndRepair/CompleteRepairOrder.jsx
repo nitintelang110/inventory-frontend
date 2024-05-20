@@ -17,7 +17,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
 
   useEffect(()=>{
   
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/get_repair_process").then(result=>{
+    axios.get("http://localhost:8000/auth/get_repair_process").then(result=>{
       if (result.data.Status) {
   
         setOrder((result.data.Result))

@@ -81,7 +81,7 @@ if (month < 10) {
 
   const sendDataToServer = async () => {
     try {
-       await axios.post('https://inventory-backend-delta-ten.vercel.app/auth/addorder', formData).then((Status) => {
+       await axios.post('http://localhost:8000/auth/addorder', formData).then((Status) => {
         if (Status) {
           Swal.fire({ position: "center", icon: "success", title: "Submit Successfully!", timer: 1800, showConfirmButton: false });
           Navigate("/auth/admin/dashboard/getorder");
@@ -98,7 +98,7 @@ if (month < 10) {
 
 
   useEffect(()=>{
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
+    axios.get("http://localhost:8000/auth/addcategory").then(result=>{
       if (result.data.Status) {
   
         setCategory((result.data.Result))
@@ -108,7 +108,7 @@ if (month < 10) {
   
     }).catch(err => console.log(err))
 
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
+    axios.get("http://localhost:8000/auth/party").then(result=>{
       if (result.data.Status) {
   
         setPartyData((result.data.Result))

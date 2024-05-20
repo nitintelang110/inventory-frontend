@@ -27,7 +27,7 @@ export const Home = () => {
 
   
   const adminCount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/admin_count").then(result => {
+    axios.get("http://localhost:8000/auth/admin_count").then(result => {
       if(result.data.Status){
       setAdminTotal(result.data.Result[0].admin)
       }
@@ -35,7 +35,7 @@ export const Home = () => {
   }
 
    const employeeCount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/employee_count").then(result => {
+    axios.get("http://localhost:8000/auth/employee_count").then(result => {
       if(result.data.Status){
       setEmployeeTotal(result.data.Result[0].product)
       }
@@ -43,7 +43,7 @@ export const Home = () => {
   }
 
    const salaryCount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/salary_count").then(result => {
+    axios.get("http://localhost:8000/auth/salary_count").then(result => {
       if(result.data.Status){
       setSalaryTotal(result.data.Result[0].total)
       }
@@ -51,7 +51,7 @@ export const Home = () => {
   }
 
    const categoryCount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/category_count").then(result => {
+    axios.get("http://localhost:8000/auth/category_count").then(result => {
       if(result.data.Status){
       setCategoryTotal(result.data.Result[0].name)
       }
@@ -59,14 +59,14 @@ export const Home = () => {
   }
 
   const partyCount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party_count").then(result => {
+    axios.get("http://localhost:8000/auth/party_count").then(result => {
       if(result.data.Status){
       setPartyTotal(result.data.Result[0].party_name)
       }
     })
   }
     const avlcount = () => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/avl_count").then(result => {
+    axios.get("http://localhost:8000/auth/avl_count").then(result => {
       if(result.data.Status){
         setAvlTotal(result.data.Result[0].avlqty)
            setOutOfStockTotal(result.data.Result[0].outofstock)

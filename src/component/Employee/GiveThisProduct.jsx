@@ -54,7 +54,7 @@ const [category,setCategory]=useState([]);
     
 useEffect(()=>{
 //getting here categories
-  axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
+  axios.get("http://localhost:8000/auth/addcategory").then(result=>{
     if (result.data.Status) {
 
       setCategory((result.data.Result))
@@ -64,7 +64,7 @@ useEffect(()=>{
   }).catch(err => console.log(err))
 
 //get for edit 
-       axios.get("https://inventory-backend-delta-ten.vercel.app/auth/avl_suply_product/"+id).then(result=>{
+       axios.get("http://localhost:8000/auth/avl_suply_product/"+id).then(result=>{
 setEmployee({...employee,
  given_name:result.data.Result[0].avl_name,
  avl_qty:result.data.Result[0].avl_qty,
@@ -111,7 +111,7 @@ given_total:result.data.Result[0].avl_total,
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("https://inventory-backend-delta-ten.vercel.app/auth/givethisproduct",  info )
+    axios.post("http://localhost:8000/auth/givethisproduct",  info )
       .then(result => {
         if (result) {
           Swal.fire({ position: "middle", icon: "success", title: "Update Successfully!", timer: 1800, showConfirmButton: false });
@@ -123,14 +123,14 @@ given_total:result.data.Result[0].avl_total,
           .catch(err => { console.log(err) })
       
 
-       axios.put("https://inventory-backend-delta-ten.vercel.app/auth/updateavlqty/"+ id,updateData )
+       axios.put("http://localhost:8000/auth/updateavlqty/"+ id,updateData )
       .then(result =>{console.log(result) })
       .catch(err => { console.log(err) })
     
 
     
     if (updateData.updateAvlQty == 0) {
-        axios.post("https://inventory-backend-delta-ten.vercel.app/auth/outofstock",  info )
+        axios.post("http://localhost:8000/auth/outofstock",  info )
       .then(result => {
       console.log(result)
       }).catch(err => { console.log(err) })

@@ -13,7 +13,7 @@ export const StartLogin = () => {
 axios.defaults.withCredentials = true;
   //roll base access
   useEffect(() => {
-    axios.get("https://inventory-backend-delta-ten.vercel.app/verify").then((result) => {
+    axios.get("http://localhost:8000/verify").then((result) => {
       if (result.data.Status) {
         if (result.data.role === 'admin') {
         Navigate("/auth/admin/dashboard")

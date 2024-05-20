@@ -12,7 +12,7 @@ export const Category = () => {
 
 useEffect(()=>{
 
-  axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
+  axios.get("http://localhost:8000/auth/addcategory").then(result=>{
     if (result.data.Status) {
 
       setCategory((result.data.Result))
@@ -26,7 +26,7 @@ useEffect(()=>{
  
   const handleDelete = (id) => {
      
-    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/delete_category/"+id).then(result => {
+    axios.delete("http://localhost:8000/auth/delete_category/"+id).then(result => {
       if (result.data.Status) {
      
         Swal.fire({

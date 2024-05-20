@@ -18,7 +18,7 @@ export const Addparty = () => {
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
-await axios.post("https://inventory-backend-delta-ten.vercel.app/auth/addparty", {party})
+await axios.post("http://localhost:8000/auth/addparty", {party})
 .then(res =>{
   if(res.data.Status){
 

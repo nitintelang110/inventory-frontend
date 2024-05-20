@@ -86,7 +86,7 @@ const DirectPurchase = () => {
 
   const sendDataToServer = async () => {
     try {
-       await axios.post('https://inventory-backend-delta-ten.vercel.app/auth/direct_purchase', formData).then((Status) => {
+       await axios.post('http://localhost:8000/auth/direct_purchase', formData).then((Status) => {
         if (Status) {
              Swal.fire({ position:"center", icon: "success", title: "Submit Successfully!", timer: 1800, showConfirmButton: false });
                Navigate("/auth/admin/dashboard/receivedproduct")
@@ -96,7 +96,7 @@ const DirectPurchase = () => {
       }).then(() => {
     
      
-      axios.post('https://inventory-backend-delta-ten.vercel.app/auth/direct_purchase_add_avl_product', formData)
+      axios.post('http://localhost:8000/auth/direct_purchase_add_avl_product', formData)
 
     
    })
@@ -108,7 +108,7 @@ const DirectPurchase = () => {
 
 
   useEffect(()=>{
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
+    axios.get("http://localhost:8000/auth/addcategory").then(result=>{
       if (result.data.Status) {
   
         setCategory((result.data.Result))
@@ -118,7 +118,7 @@ const DirectPurchase = () => {
   
     }).catch(err => console.log(err))
 
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
+    axios.get("http://localhost:8000/auth/party").then(result=>{
       if (result.data.Status) {
   
         setPartyData((result.data.Result))
@@ -129,7 +129,7 @@ const DirectPurchase = () => {
     }).catch(err => console.log(err))
 
 
-     axios.get("https://inventory-backend-delta-ten.vercel.app/auth/order_id_for_direct_avl_product").then(result=>{
+     axios.get("http://localhost:8000/auth/order_id_for_direct_avl_product").then(result=>{
       if (result) {
   
         setOrderId(result.data.Result[0].last_id)

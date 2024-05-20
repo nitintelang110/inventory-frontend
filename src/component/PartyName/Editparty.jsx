@@ -23,7 +23,7 @@ console.log(editParty)
 
 useEffect(()=>{
 
-  axios.get("https://inventory-backend-delta-ten.vercel.app/auth/editparty/"+id).then(result=>{
+  axios.get("http://localhost:8000/auth/editparty/"+id).then(result=>{
     
  setEditParty(result.data.Result)
   }).catch(err => console.log(err))
@@ -33,7 +33,7 @@ useEffect(()=>{
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  axios.put("https://inventory-backend-delta-ten.vercel.app/auth/editedparty/" + id,  {editParty} )
+  axios.put("http://localhost:8000/auth/editedparty/" + id,  {editParty} )
     .then(result =>{if(result){
       Swal.fire({ position: "middle", icon: "success", title: "Update Successfully!", timer: 1800, showConfirmButton: false });
     } })
