@@ -1,0 +1,36 @@
+.mainsection{
+    margin-top: 1%;
+    margin-bottom: 2%;
+border: 1px solid rgb(218, 218, 218);
+background-color: rgb(255, 255, 255);
+width: 98%;
+margin-left: 1%;
+}
+.container{
+margin-top: 10px;
+
+}
+.form{
+   background-color: rgb(198, 224, 247);
+    color: black;
+   padding: 20px 20px; 
+   border-radius: 5px;
+   width: 96%;
+   margin-left: 2%;
+   margin-bottom: 20px;
+}
+#formContainer{
+display: flex;
+flex-direction: column;
+ padding: 10px;
+}
+
+#rcd_prouduct_heading{
+  background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   padding: 7px;
+   margin-top: 20px;
+   font-family: sans-serif;
+}

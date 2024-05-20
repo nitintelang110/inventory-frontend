@@ -1,0 +1,22 @@
+
+.mainsection{
+    margin-top: 10%;
+    display:flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container{
+width: 30%;
+padding: 20px 30px;
+background-color: rgba(96, 96, 96, 0.273);
+border: 1px solid rgb(155, 155, 155);
+box-shadow: 5px 5px 5px rgb(141, 141, 141);
+
+}
+.form{
+    color: black;
+   padding: 20px 20px; 
+   border-radius: 5px;
+   width: 100%;
+}

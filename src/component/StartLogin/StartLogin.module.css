@@ -1,0 +1,18 @@
+.main_container{
+    background-image: url("../../assets/homeImage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#container{
+    width: 30%;
+
+}
+
+
+@media screen and (max-width:1024px){
+    #container{
+        width: 80%;
+    
+    }
+}

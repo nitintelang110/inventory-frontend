@@ -1,0 +1,13 @@
+#get_order_container_strip{
+background: #4f1126;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #51bbd3, #2e0351); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.order_completed_row{
+    background-color:none;
+}
+#order_completed_btn{
+    background-color: rgb(243, 206, 206);
+}

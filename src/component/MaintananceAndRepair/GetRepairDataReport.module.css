@@ -1,0 +1,151 @@
+.employee_image{
+    width: 40px;
+    height: 40px;
+    border-radius: 500px;
+    border: 1px solid black;
+    margin-left:10px ;
+     margin-top:5px ;
+}
+.employee_image:hover{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left:-15% ;
+     margin-top:-255px ;
+     cursor: pointer;
+     z-index: 200;
+}
+
+.container{
+    width: 95%;
+   margin-left: 2.5%;
+   background-color: rgb(255, 255, 255);
+   padding: 10px;
+   margin-top: 25px;
+   
+}
+.table_head{
+    background-color: rgb(7, 133, 129);
+    color: white;
+    font-size: 13px;
+}
+#orderNo{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#orderNo:focus{
+ outline:none
+}
+#partyname{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#partyname:focus{
+ outline:none
+}
+#productName{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#productName:focus{
+ outline:none
+}
+.btns_container{
+ margin-top: 1px;   
+ display: flex;
+ justify-content: end;
+ width: 100%;
+}
+#strip_head{
+   background-color: rgb(9, 157, 152);
+}
+.page_number{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+
+ font-size: 13px;
+ font-family: sans-serif;
+ margin-top: 20px;
+ margin-right: 100px;
+
+}
+.prev{
+padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+border: 1px solid rgb(218, 218, 218);
+margin-right: 1px;
+color: black;
+
+
+}
+.next{
+padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+border: none;
+margin-left: 1px;
+color: black;
+border: 1px solid rgb(218, 218, 218);
+}
+
+.prev:hover{
+padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+   border: 1px solid rgb(202, 202, 202);
+
+color: rgb(215, 8, 163);
+
+  transition: 0.1s ease;
+  }
+  .next:hover{
+     padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+   border: 1px solid rgb(202, 202, 202);
+
+color: rgb(215, 8, 163);
+
+  transition: 0.1s ease;
+  }
+.numbers{
+   border: 1px solid rgb(202, 202, 202);
+  list-style-type: none;
+padding:2px 10px 2px 10px;
+cursor:pointer;
+caret-color: transparent;
+
+  
+}
+.active_numbers{
+
+    list-style-type: none;
+  padding:2px 10px 2px 10px;
+    color: black;
+    cursor:pointer;
+    caret-color: transparent;
+background-color: #b0d9ee;
+    border: 1px solid rgb(202, 202, 202);
+   
+}
+  #dwn_btn_container{
+  margin-left: 50px;
+}
+#dwn_btn{
+background-color: #01a36d;
+color: white;
+font-family: sans-serif;
+font-weight:540 ;
+}
+#pgNo{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#pgNo:focus{
+ outline:none
+}

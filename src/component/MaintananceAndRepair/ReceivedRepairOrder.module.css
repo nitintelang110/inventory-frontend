@@ -1,0 +1,40 @@
+.btns_process{
+    border:none;
+    background: #00896e;  /* fallback for old browsers */
+    font-family: verdana;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .btns_complete{
+    border:none;
+    background-color: rgb(1, 165, 194);
+    font-family: verdana;
+    font-size: 15px;
+    margin-left: 10px;  
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+ 
+  .btns{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  #fromDate{
+    border: 1px solid rgb(213, 213, 213);
+    padding: 7px;
+  }
+  #fromDate:focus{
+   outline:none
+  }
+  #toDate{
+    border: 1px solid rgb(213, 213, 213);
+    padding: 7px;
+  }
+  #toDate:focus{
+   outline:none
+  }

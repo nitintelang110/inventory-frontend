@@ -1,0 +1,41 @@
+.employee_details_container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 30px 150px 150px 150px;
+}
+.head_container{
+    background-color: aliceblue;
+    box-shadow: 0px 7px 7px gray;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.emp_det_image{
+    width: 200px;
+    height: 150px;
+    margin-right: 35px;
+    margin-bottom: 25px;
+}
+.logo_name{
+    color: gray;
+    text-align: center;
+    margin-top: 35px;
+}
+
+@media screen and (max-width:1024px){
+    .employee_details_container{
+    width: 80%;
+     margin-top: 7%;
+     padding: 30px 1px 250px 10px;
+    
+}
+.head_container{
+    background-color: aliceblue;
+    box-shadow: 0px 7px 7px gray;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 260px;
+}
+}

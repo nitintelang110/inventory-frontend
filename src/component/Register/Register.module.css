@@ -1,0 +1,63 @@
+
+.maincontainer{
+background-color: rgb(235, 234, 234);
+width: 100%;
+height: 100vh;
+position: absolute;
+}
+
+
+
+.mainsection{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 50%;
+   margin-left: 25%;
+   margin-top: 5%;
+  box-shadow: 0 2px 5px rgb(1, 47, 1);
+   
+    /*background-image: url("../../assets/login/backwalls.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+.leftside{
+ 
+   width: 50%;
+   min-height: 60vh;
+   
+   
+}
+img{
+width: 100%;
+background-size: cover;
+height: 600px;
+ 
+}
+.rightside{
+   padding-left: 20px;
+   width: 50%;
+   
+}
+
+.form{
+   padding: 20px 20px; 
+   border-radius: 5px;
+   width: 90%;
+   
+}
+.links{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 70%;
+   margin-left: 10%;
+}
+
+@media screen and (max-width:1024px){
+   .container{
+width: 85%;
+} 
+}

@@ -1,0 +1,206 @@
+.employee_image{
+    width: 40px;
+    height: 40px;
+    border-radius: 500px;
+    border: 1px solid black;
+    margin-left:10px ;
+    margin-top:5px ;
+}
+.employee_image:hover{
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left:-25% ;
+    margin-top:-605px ;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.container{
+    width: 95%;
+   margin-left: 2.5%;
+   background-color: rgb(255, 255, 255);
+   padding: 10px;
+   margin-top: 10px;
+   
+}
+.table_head{
+    background-color: rgb(29, 81, 121);
+    color: rgb(235, 234, 234);
+    font-size: 13px;
+    font-family: sans-serif;
+}
+#rcd_order_heading{  
+    
+background: #20002c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0093cd, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: verdana;   
+
+font-family: sans-serif;
+color: rgb(0, 1, 0);
+}
+
+#rcd_order_headings{
+background: #20002c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #20bb97, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: aliceblue;
+font-weight: 700;
+
+}
+#searchName{
+padding: 6px;
+border-radius: 1px;
+border: 1px solid rgb(198, 198, 205);
+}
+#searchName:focus{
+outline: none;
+}
+.rcd_main_head{
+background-color: #0c146b91;
+}
+#selectTable{
+    margin-top: -17px;
+  
+}
+#selectTable:focus{
+    outline: none;
+}
+#searchTable{  
+height: 38px;
+border: 1px solid rgb(198, 198, 205);
+  }
+  #searchTable:focus{ 
+     outline: none;
+  }
+  .boyimg{
+   height: 500px;
+   width: 700px;
+   padding-bottom: 25px;
+  }
+  #orderNo{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#orderNo:focus{
+ outline:none
+}
+#partyname{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#partyname:focus{
+ outline:none
+}
+#productName{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#productName:focus{
+ outline:none
+}
+#dwn_btn_container{
+  margin-left: 150px;
+}
+#dwn_btn{
+background-color: #019fc3;
+color: white;
+font-family: sans-serif;
+font-weight:540 ;
+}
+#pgNo{
+  border: 1px solid rgb(213, 213, 213);
+  padding: 7px;
+}
+#pgNo:focus{
+ outline:none
+}
+.numbers{
+     border: 1px solid rgb(202, 202, 202);
+    list-style-type: none;
+ padding:2px 10px 2px 10px;
+cursor:pointer;
+caret-color: transparent;
+
+    
+}
+.active_numbers{
+ 
+      list-style-type: none;
+    padding:2px 10px 2px 10px;
+      color: black;
+      cursor:pointer;
+      caret-color: transparent;
+background-color: #b0d9ee;
+      border: 1px solid rgb(202, 202, 202);
+     
+}
+.page_number{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  
+   font-size: 13px;
+   font-family: sans-serif;
+   margin-top: 20px;
+   margin-right: 100px;
+
+}
+.prev{
+  padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+border: 1px solid rgb(218, 218, 218);
+margin-right: 5px;
+color: black;
+
+
+}
+.next{
+  padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+border: none;
+margin-left: 5px;
+color: black;
+border: 1px solid rgb(218, 218, 218);
+}
+
+.prev:hover{
+  padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+     border: 1px solid rgb(202, 202, 202);
+
+color: rgb(215, 8, 163);
+
+    transition: 0.1s ease;
+    }
+    .next:hover{
+       padding:2px 10px 2px 10px;
+display: inline;
+cursor:pointer;
+     border: 1px solid rgb(202, 202, 202);
+
+color: rgb(215, 8, 163);
+
+    transition: 0.1s ease;
+    }
+    #fromDate{
+      border: 1px solid rgb(213, 213, 213);
+      padding: 7px;
+    }
+    #fromDate:focus{
+     outline:none
+    }
+    #toDate{
+      border: 1px solid rgb(213, 213, 213);
+      padding: 7px;
+    }
+    #toDate:focus{
+     outline:none
+    }
