@@ -1,5 +1,5 @@
 import React,{ useEffect } from 'react';
-import styles from './startlogin.module.css';
+import styles from './StartLogin.module.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
