@@ -24,12 +24,14 @@ export const Login = () => {
     });
   const [error, setError] = useState();
 
+  console.log(values)
+
   const Navigate = useNavigate();
  
   axios.defaults.withCredentials = true;  //to save the token in cookies
    const handleSubmit = (e)=>{
       e.preventDefault();
-      axios.post("https://inventory-backend-delta-ten.vercel.app/auth/adminlogin", values)
+      axios.post("https://inventory-backend-delta-ten.vercel.app/adminlogin", values)
         .then(result => {
           if (result.data.loginStatus) {
           setAdamId(result.data.Result[0].id)
