@@ -114,7 +114,7 @@ export const OutOfStock = () => {
           
          <div className="d-flex bg-light p-2 mt-3 mb-4 flex-row col-md-12">
            
-            <div className='col-md-3 bg-light'>
+            <div className='col-md-4 bg-light'>
         <div className=''>Select Date</div>
           <input className='p-1' type="date" /><span className='mx-2'>TO</span><input className='p-1' type="date" />
   

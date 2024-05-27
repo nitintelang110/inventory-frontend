@@ -261,7 +261,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
    
   useEffect(()=>{
   
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/getorder").then(result=>{
+    axios.get("http://localhost:8000/auth/getorder").then(result=>{
       if (result.data.Status) {
   
         setOrder(result.data.Result)
@@ -274,7 +274,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
 
 
 
-      axios.get("https://inventory-backend-delta-ten.vercel.app/auth/receivedproducts").then(result=>{
+      axios.get("http://localhost:8000/auth/receivedproducts").then(result=>{
       if (result.data.Status) {
   
        setReceivedProduct((result.data.Result[0]))
@@ -289,7 +289,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
   
   const handleDelete = (id) => {
   
-    axios.delete("https://inventory-backend-delta-ten.vercel.app/auth/deleteOrder/"+id).then(result => {
+    axios.delete("http://localhost:8000/auth/deleteOrder/"+id).then(result => {
       if (result.data.Status) {
 
         Swal.fire({
@@ -392,10 +392,10 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
              
                 <div className='col-md-3 bg-light'>
                  <div className=''>Select Date</div>
-                <div className='col-md-4 bg-light d-flex flex-row'>
+                <div className='col-md-5 bg-light d-flex flex-row'>
           <input className='col-md-12  ' name='startDate' type="date" value={startDate} onChange={(e)=>setStartDate(e.target.value)}  id={styles.fromDate} />
           <span className='mx-2'>TO</span>
-          <input className='col-md-12  ' name='endDate' type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} id={styles.toDate} />
+          <input className='col-md-12 ' name='endDate' type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} id={styles.toDate} />
                   </div>
               </div>
 
@@ -532,14 +532,14 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
                         </td>
                       
                        
-                        <td className="mt-0">
-                          <Link to={`/auth/admin/dashboard/edit_order/` + emp.id} className='btn btn-primary btn-sm mx-2'>Edit</Link>
+                        <td className="mt-0 d-flex">
+                          <Link to={`/auth/admin/dashboard/edit_order/` + emp.id} className='btn btn-primary btn-sm mx-2'><i class="bi bi-pencil"></i></Link>
         
-                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}>Delete</button>
+                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}><i class="bi bi-trash3"></i></button>
 
                         {/* <Link data-bs-toggle="modal" data-bs-target="#staticBackdrop" to={`/auth/admin/dashboard/addemployee/` + emp.id} className='btn btn-success px-4 btn-sm mx-2'>Order Received </Link>*/} 
                                
-                   <button className='btn btn-success mx-2 btn-sm' data-bs-target="#staticBackdrop" data-bs-toggle="modal" onClick={()=>setMode(true)}><span onClick={()=>setI(emp.id)}>Received Order</span> </button>       
+                   <button className='btn btn-success mx-2 btn-sm' data-bs-target="#staticBackdrop" data-bs-toggle="modal" onClick={()=>setMode(true)}><span onClick={()=>setI(emp.id)}>Received</span> </button>       
 
                           
                         </td>

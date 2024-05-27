@@ -347,7 +347,7 @@ export const ReceivedProduct = () => {
   <div className='col-md-3 bg-light'>
 
                  <div className=''>Select Date</div>
-                <div className='col-md-4 bg-light d-flex flex-row'>
+                <div className='col-md-5 bg-light d-flex flex-row'>
           <input className='col-md-12' name='startDate' type="date" value={startDate} onChange={(e)=>setStartDate(e.target.value)}  id={styles.fromDate} />
           <span className='mx-2'>TO</span>
           <input className='col-md-12' name='endDate' type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} id={styles.toDate} />
@@ -486,7 +486,7 @@ export const ReceivedProduct = () => {
                         <td className='p-0' >
                           <Link to={`/auth/admin/dashboard/editreceivedproduct/` + emp.id} className='btn btn-primary btn-sm m-2'>Edit</Link>
         
-                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}>Delete</button>
+                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}><i class="bi bi-trash3"></i></button>
 
                                                      
                         </td>

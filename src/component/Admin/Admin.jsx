@@ -71,7 +71,7 @@ const handleLogout =()=>{
                 <div className= "col-auto col-md-3 col-xl-2 px-0" id={styles.vertical_navbar}>
                     <div className='d-flex flex-column align-items-center align-items-sm-start px-1 pt-2 text-white min-vh-100'>
               <NavLink to="/auth/admin/dashboard" className='d-flex align-item-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none'>
-                <marquee id={styles.marque} className='fm-5 fw-bolder d-none d-sm-inline my-1 text-white' scrolldelay='250' >SAHAKAR VIDYA MANDIR</marquee>
+                <marquee id={styles.marque} className='fm-5 fw-bolder d-none d-sm-inline my-1 text-white' scrolldelay='250' >SAHAKAR COMPUTER SHOP</marquee>
                </NavLink>
               <ul className='nav nav-pills flex-column mb-sm-auto mb-1 align-items-center align-items-sm-start' id={styles.navlist}>
 
@@ -212,8 +212,9 @@ const handleLogout =()=>{
           </div>
           
           <div className='col p-0 m-0 '>
-            <h5 className='px-5 py-2 my-0 bg-light shadow'></h5>
+            <h5 className='px-5 py-0 my-3 bg-light shadow'></h5>
             <div className='p-2 py-3 d-flex justify-content-center' id={styles.headimg}>
+              <h3 className=''>COMPANY AND COMPANY SHOP NAME</h3>
             </div>
             
             <div className='px-5 py-2 my-0 bg-light d-flex flex-row justify-content-between align-items-center shadow text-primary w-100 '>  <span id={styles.clock}><Clock /></span> <span className={styles.adminname}>Admin Name - {adminName.name}</span> </div>

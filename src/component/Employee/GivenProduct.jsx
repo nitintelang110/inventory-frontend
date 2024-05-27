@@ -339,7 +339,7 @@ export const GivenProduct = () => {
          
            <div className="d-flex bg-light p-2 mt-3 mb-4 flex-row col-md-12">
            
-            <div className='col-md-3 bg-light'>
+            <div className='col-md-4 bg-light'>
         <div className=''>Select Date</div>
           <input className='p-1' type="date" /><span className='mx-2'>TO</span><input className='p-1' type="date" />
   
@@ -462,7 +462,7 @@ export const GivenProduct = () => {
                         <td className='p-0' >
                           <Link to={`/auth/admin/dashboard/editemployee/` + emp.id} className='btn btn-primary btn-sm m-2'>Edit</Link>
         
-                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}>Delete</button>
+                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}><i class="bi bi-trash3"></i></button>
                         </td>
                       </tr>
     

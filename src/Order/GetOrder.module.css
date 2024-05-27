@@ -164,7 +164,7 @@ font-weight:540 ;
 }
 #pgNo{
   border: 1px solid rgb(213, 213, 213);
-  padding: 7px;
+  padding: 8px;
 }
 #pgNo:focus{
  outline:none
@@ -183,3 +183,18 @@ font-weight:540 ;
 #toDate:focus{
  outline:none
 }
+@media screen and (min-width:1380px) {
+  .container{
+    width: 98%;
+   margin-left: 1%;
+   background-color: rgb(255, 255, 255);
+   padding: 10px;
+   margin-top: 10px;
+   font-size: 15px;
+   font-family: sans-serif;
+}
+    #dwn_btn_container{
+      margin-left: 50px;
+    };
+  }
+  

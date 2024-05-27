@@ -518,7 +518,7 @@ import * as XlsxPopulate from "xlsx-populate/browser/xlsx-populate";
                         <td className="mt-0">
                           <Link to={`/auth/admin/dashboard/edit_order/` + emp.id} className='btn btn-primary btn-sm mx-2'>Edit</Link>
         
-                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}>Delete</button>
+                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}><i class="bi bi-trash3"></i></button>
   
                         </td>
 

@@ -1,6 +1,6 @@
 
 
-import React, { useEffect,  useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import styles from './Order.module.css';
@@ -32,7 +32,7 @@ if (month < 10) {
   const [addRows, setAddRows] = useState(false);
   const [partyData,setPartyData] = useState([]);
   const [category, setCategory] = useState([]);
-  const [partyName, setPartyName] = useState('');
+  const [partyName, setPartyName] = useState("");
   const [partyNameTrue, setPartyNameTrue] = useState(false)
   
 
@@ -40,7 +40,9 @@ if (month < 10) {
   
      let randomInteger = `${ Math.floor(Math.random() * 100000) + 1
 }`;
+    
 
+    
 
   const [formData, setFormData] = useState([{ order_product_name: '', order_qty: '', rcd_order_qty: 0, order_date: fullDate, order_status: 'NO', order_category: '', order_party:'',order_remark:'',order_no:randomInteger}]);
 
@@ -142,14 +144,16 @@ if (month < 10) {
     });
   }
 
+
+ 
   return (
     <div className={styles.main_container} >
       <div className={styles.head}><h5 className='mx-4'>ADD ORDER</h5></div>
 
       <div className={styles.partContainer}>
      
-        <select  className={styles.part} value={partyName} onChange={(e) => setPartyName(e.target.value)} onClick={()=>setPartyNameTrue(true)}>
-                <option onClick={()=>setPartyNameTrue(false)}>-- SELECT PARTY--</option>
+        <select className={styles.part} value={partyName} onChange={(e) => setPartyName(e.target.value)} onClick={()=>setPartyNameTrue(true)}>
+                <option onClick={()=>setPartyNameTrue(false)}>--SELECT PARTY--</option>
                 {partyData.map((c,id)=>{
                     return(
                       <>
@@ -188,9 +192,9 @@ if (month < 10) {
             onChange={e => handleInputChange(index, e)}
             onFocus={!partyNameTrue?partyAlertMsg:""}
             required
-          />
+           />
 
-            <input
+         <input
            type="text"
            className={styles.pname}
            name="order_party"
@@ -205,7 +209,7 @@ if (month < 10) {
          
 
           <div className='d-flex flex-column col-md-1 mx-2 '>
-           <div className="col-md-1 w-100  ">Category</div>
+           <div className="col-md-1 w-100">Category</div>
              <select name='order_category'   id={styles.category}  className={styles.cat} onChange={e => handleInputChange(index, e)}>
              <option >-- Select --</option>
                 {category.map((c,id)=>{
@@ -229,6 +233,7 @@ if (month < 10) {
             name="order_qty"
             value={data.order_qty}
             onChange={e => handleInputChange(index, e)}
+           
           />
          </div>
 
@@ -281,7 +286,7 @@ if (month < 10) {
       ))}
 
           <div className="w-100 d-flex flex-row justify-content-end mt-3">
-          <button className={styles.send_btn} onClick={partyNameTrue?sendDataToServer:partyAlert}>SUBMIT</button>
+          <button type='submit' className={styles.send_btn} onClick={partyNameTrue?sendDataToServer:partyAlert}>SUBMIT</button>
           </div>
 
 

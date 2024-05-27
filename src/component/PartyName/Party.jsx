@@ -96,7 +96,7 @@ useEffect(()=>{
   </td>
   <td >
   <Link to={`/auth/admin/dashboard/editparty/`+ c.id } className='btn btn-primary btn-sm'>Edit</Link>
-  <button className='btn btn-danger btn-sm mx-3' onClick={()=>handleDelete(c.id)}>Delete</button>
+  <button className='btn btn-danger btn-sm mx-3' onClick={()=>handleDelete(c.id)}><i class="bi bi-trash3"></i></button>
   </td>
 </tr>
 </>

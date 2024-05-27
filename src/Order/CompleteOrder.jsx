@@ -103,14 +103,14 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
     <div className={styles.container}>
 
 
-        <div className='px-5 mt-3 border p-3  w-100'>
+        <div className='px-5 mt-1 border p-3  w-100'>
           
             <div className="d-flex flex-row bg-light p-2 col-md-12 mb-4">
            
         
             <div className='col-md-3 bg-light'>
                  <div className=''>Select Date</div>
-                <div className='col-md-4 bg-light d-flex flex-row'>
+                <div className='col-md-5 bg-light d-flex flex-row'>
           <input className='col-md-12' name='startDate' type="date" value={startDate} onChange={(e)=>setStartDate(e.target.value)}  id={styles.fromDate} />
           <span className='mx-2'>TO</span>
           <input className='col-md-12' name='endDate' type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} id={styles.toDate} />

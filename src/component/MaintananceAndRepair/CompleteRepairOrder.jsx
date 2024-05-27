@@ -78,7 +78,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
             <div className="d-flex bg-light p-2 mt-3 flex-row col-md-12 ">
            
           
-    <div className='col-md-3 bg-light'>
+    <div className='col-md-4 bg-light'>
         <div className=''>Select Date</div>
           <input className='p-1' type="date" /><span className='mx-2'>TO</span><input className='p-1' type="date" />
   
@@ -113,7 +113,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
           </select>
                </div>
 
-              <div className='col-md-2' id={styles.dwn_btn_container}>
+              <div className='col-md-2' id={styl.dwn_btn_container}>
                 <div>Download</div>
               <DownloadTableExcel
                     filename="OutOfStock_item_list"
@@ -121,7 +121,7 @@ import { DownloadTableExcel } from 'react-export-table-to-excel';
                     currentTableRef={tableRef.current}
            
                 >
-                   <button id={styles.dwn_btn} className='btn px-4 border-0' on> Export excel </button>
+                   <button id={styl.dwn_btn} className='btn px-2 border-0' on>Download</button>
 
           </DownloadTableExcel>
               </div>

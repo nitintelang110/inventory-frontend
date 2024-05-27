@@ -363,7 +363,7 @@ const id = useParams();
         
             <div className="d-flex bg-light p-2 mt-3 flex-row col-md-12 ">
            
-              <div className='col-md-3 bg-light'>
+              <div className='mx-2 bg-light'>
         <div className=''>Select Date</div>
           <input className='p-1' type="date" /><span className='mx-2'>TO</span><input className='p-1' type="date" />
   
@@ -386,7 +386,7 @@ const id = useParams();
               
           
               <div className='col-md-1 mx-2'>
-                <div>No Of Record</div>
+                <div>Record/page</div>
                <select   id={styles.pgNo} className='w-100 py-2' value={page} onChange={(e) => setPage(e.target.value )} >
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -396,10 +396,8 @@ const id = useParams();
           </select>
                </div>
 
-              <div className='col-md-2' id={styles.dwn_btn_container}>
-                <div>Download</div>
-                <button id={styles.dwn_btn} className='btn px-4 border-0' onClick={()=>createDownLoadRcdOrderData()}>Download Excel</button>
-            </div>
+               <button id={styles.dwn_btn} className='btn btn-sm mx-2 py-0 border-0' onClick={()=>createDownLoadRcdOrderData()}>Download</button>
+
          
             </div>
    
@@ -500,7 +498,7 @@ const id = useParams();
                         <td className='p-0' >
                           <Link to={`/auth/admin/dashboard/editemployee/` + emp.id} className='btn btn-primary btn-sm m-2'>Edit</Link>
         
-                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}>Delete</button>
+                          <button className='btn btn-danger btn-sm' onClick={() => handleDelete(emp.id)}><i class="bi bi-trash3"></i></button>
 
                          
                            <button className='btn btn-success mx-2 px-4 btn-sm m2' data-bs-target="#staticBackdrop" data-bs-toggle="modal" onClick={()=>setMode(true)}><span onClick={()=>setI(emp.id)}>Received Order</span> </button>       

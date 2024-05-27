@@ -204,3 +204,18 @@ color: rgb(215, 8, 163);
     #toDate:focus{
      outline:none
     }
+
+    @media screen and (min-width:1380px) {
+      .container{
+        width: 98%;
+       margin-left: 1%;
+       background-color: rgb(255, 255, 255);
+       padding: 10px;
+       margin-top: 10px;
+     
+    }
+    #dwn_btn_container{
+      margin-left: 50px;
+    }
+    }
+   
