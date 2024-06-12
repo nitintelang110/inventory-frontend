@@ -36,7 +36,7 @@ const DirectPurchase = () => {
     
  
 
-  const [formData, setFormData] = useState([{ direct_rcd_name: '',  direct_rcd_qty: '', direct_rcd_category: '', direct_rcd_party:'', direct_rcd_price: '', direct_rcd_total:'',direct_rcd_description:'',direct_order_date:fullDate,direct_rcd_date:fullDate,direct_rcd_status:'YES',direct_order_no:randomInteger,direct_order_id:randomDirectOrderId,direct_given_qty:directGivenQty}]);
+  const [formData, setFormData] = useState([{ direct_rcd_name: '',  direct_rcd_qty: '', direct_rcd_category: '', direct_rcd_party:partyName, direct_rcd_price: '', direct_rcd_total:'',direct_rcd_description:'',direct_order_date:fullDate,direct_rcd_date:fullDate,direct_rcd_status:'YES',direct_order_no:randomInteger,direct_order_id:randomDirectOrderId,direct_given_qty:directGivenQty}]);
 
   const [addRows, setAddRows] = useState(false);
   const [partyData,setPartyData] = useState([]);
@@ -62,7 +62,7 @@ const DirectPurchase = () => {
   };
 
   const addRow = () => {
-    setFormData([...formData, { direct_rcd_name: '',  direct_rcd_qty:'',direct_rcd_category:'',direct_rcd_party:'',direct_rcd_price:'',direct_rcd_total:'',direct_rcd_description:'',direct_order_date:fullDate,direct_rcd_date:fullDate,direct_rcd_status:'YES',direct_order_no:randomInteger,direct_order_id:randomDirectOrderIdForRow,direct_given_qty:directGivenQty}]);
+    setFormData([...formData, { direct_rcd_name: '',  direct_rcd_qty:'',direct_rcd_category:'',direct_rcd_party:partyName,direct_rcd_price:'',direct_rcd_total:'',direct_rcd_description:'',direct_order_date:fullDate,direct_rcd_date:fullDate,direct_rcd_status:'YES',direct_order_no:randomInteger,direct_order_id:randomDirectOrderIdForRow,direct_given_qty:directGivenQty}]);
     if (formData.length >= 1) {
       setAddRows(true)
  
@@ -220,7 +220,7 @@ const DirectPurchase = () => {
           />
 
 
-           <input
+          {/* <input
            type="text"
            className={styles.pname}
            name="direct_rcd_party"
@@ -228,7 +228,7 @@ const DirectPurchase = () => {
            onFocus={e => handleInputChange(index, e)}
            onSubmit={e => handleInputChange(index, e)}
            required
-         />
+         />*/}
 
           </div>
           

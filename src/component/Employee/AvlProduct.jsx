@@ -14,7 +14,7 @@ export const AvlProduct = () => {
   const [employee, setEmployee] = useState([]);
   
 
- const [searchName,setSearchName] = useState(''); 
+   const [searchName,setSearchName] = useState(''); 
    const [partyName, setPartyName] = useState(''); 
    const [orderNo, setOrderNo] = useState(''); 
 

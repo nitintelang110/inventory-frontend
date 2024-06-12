@@ -10,7 +10,8 @@ export const EditReceivedProduct = () => {
   const { id } = useParams();
 
   const Navigate = useNavigate();
-
+  
+const [stockAmount,setStockAmount] = useState("");
 const [employee, setEmployee] = useState({
     rcd_name:'',
     rcd_qty:'',
@@ -18,13 +19,21 @@ const [employee, setEmployee] = useState({
     rcd_party:'',
     rcd_price: '',
     rcd_total:'',
-    rcd_description: ''
- 
+    rcd_description: '',
+    order_id:'',
+    stockAmount:stockAmount
 });
+
 
 
 const [category,setCategory]=useState([]);
 const [partyData,setPartyData] = useState([]);
+const [pendingOrder,setPendingOrder] = useState([]);
+
+
+
+
+console.log(stockAmount)
 
 useEffect(()=>{
 //getting here categories
@@ -58,9 +67,33 @@ rcd_party: result.data.Result[0].rcd_party,
 rcd_price: result.data.Result[0].rcd_price,
 rcd_total:result.data.Result[0].rcd_total,
 rcd_description:result.data.Result[0].rcd_description,
-    })
+order_id:result.data.Result[0].order_id
+    })})
   
+    axios.get("http://localhost:8000/auth/avl_product").then(result=>{
+      if (result.data.Status) {
+  
+        setStockAmount((result.data.Result))
+        
+      }else{
+        alert(result.data.Error)
+      }
+
   }).catch(err => console.log(err))
+
+
+  axios.get("http://localhost:8000/auth/getPendingorder_rcd_qty/"+`${employee.order_id}`).then(result=>{
+    if (result.data.Status) {
+    
+      setPendingOrder(result.data.Result[0].rcd_order_qty)
+       
+    }else{
+      alert(result.data.Error)
+    }
+
+  }).catch(err => "")
+
+
 },[])
 
 
@@ -73,6 +106,29 @@ rcd_description:result.data.Result[0].rcd_description,
          Swal.fire({ position: "middle", icon: "success", title: "Update Successfully!", timer: 1800, showConfirmButton: false });
       } })
     .catch(err=>{console.log(err)})
+
+       
+
+       const dat = {
+        order_id:employee.order_id,
+        rcd_qty:pendingOrder - employee.rcd_qty
+       }
+
+
+    axios.put("http://localhost:8000/auth/update_received_qty_in_pending", dat
+    )
+    .then(result => {
+      if (result) {
+       " "
+    } })
+  .catch(err=>{console.log(err)})
+
+  axios.put("http://localhost:8000/auth/update_received_qty_in_stock", employee)
+  .then(result => {
+    if (result) {
+     ""
+  } })
+.catch(err=>{console.log(err)})
 Navigate("/auth/admin/dashboard/receivedproduct")
     
   }

@@ -71,7 +71,7 @@ document.getElementById("submit_btn").style.display="none"
    
   }
   
-axios.put('https://inventory-backend-delta-ten.vercel.app/auth/order_table_update/'+ orderId, data )
+axios.put('http://localhost:8000/auth/order_table_update/'+ orderId, data )
 
   //we should not send file from front end without this code bcoz file always use form data object so we cant send file without this so that why we need for all input bcoz file also going with this input
   const formData = new FormData();
@@ -93,7 +93,7 @@ axios.put('https://inventory-backend-delta-ten.vercel.app/auth/order_table_updat
   
 
 
-  axios.post('https://inventory-backend-delta-ten.vercel.app/auth/receivedproduct', formData)
+  axios.post('http://localhost:8000/auth/receivedproduct', formData)
  
    .then(result =>{
      if (result.data.Status) {
@@ -129,9 +129,9 @@ return alert(result.data.Error)
        total_rcd_qty:parseInt(orderData.rcd_order_qty) + parseInt(receivedQty)
   }
      if(receivedQty === 0){
-      axios.post('https://inventory-backend-delta-ten.vercel.app/auth/add_avl_product', avlData)
+      axios.post('http://localhost:8000/auth/add_avl_product', avlData)
      } else if (receivedQty > 0) {
-       axios.put('https://inventory-backend-delta-ten.vercel.app/auth/update_exist_avl_product/'+orderId, avlUpdateData ) 
+       axios.put('http://localhost:8000/auth/update_exist_avl_product/'+orderId, avlUpdateData ) 
      } else {
        alert("SOMETHING WRONG")
 }    
@@ -147,7 +147,7 @@ return alert(result.data.Error)
 
 
      //getting order product here
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/getorder/"+ids).then(result=>{
+    axios.get("http://localhost:8000/auth/getorder/"+ids).then(result=>{
       if (result.data.Status) {
        setOrderId(result.data.Result[0].id)
         setOrderData(result.data.Result[0])
@@ -161,7 +161,7 @@ return alert(result.data.Error)
 
 
       //getting given order qty product here
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/get_given_order_qty/"+ids).then(result=>{
+    axios.get("http://localhost:8000/auth/get_given_order_qty/"+ids).then(result=>{
       if (result.data.Status) {
       
         setSuplyQty(result.data.Result[0].given_qty)
@@ -175,7 +175,7 @@ return alert(result.data.Error)
 
 
   //getting order product category here
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/addcategory").then(result=>{
+    axios.get("http://localhost:8000/auth/addcategory").then(result=>{
       if (result.data.Status) {
   
         setCategory((result.data.Result))
@@ -185,7 +185,7 @@ return alert(result.data.Error)
   
     }).catch(err => console.log(err))
 //getting order product party here
-    axios.get("https://inventory-backend-delta-ten.vercel.app/auth/party").then(result=>{
+    axios.get("http://localhost:8000/auth/party").then(result=>{
       if (result.data.Status) {
   
         setPartyData((result.data.Result))
@@ -198,7 +198,7 @@ return alert(result.data.Error)
  
 
       //getting received avl product amount sum to add next order from avl_product here
-      axios.get("https://inventory-backend-delta-ten.vercel.app/auth/total_amount/"+ids).then(result=>{
+      axios.get("http://localhost:8000/auth/total_amount/"+ids).then(result=>{
         if (result.data.Status) {
          
           setSumOfAvlProduct(result.data.Result[0].avl_total)
@@ -235,7 +235,7 @@ return alert(result.data.Error)
 
   <div className="col-md-2 d-none ">
     <label  className="form-label text-dark h6">Name</label>
-            <input type="text" name='order_product_name' placeholder='Enter Name' value={orderData.order_product_name} autoComplete='off' onChange={(e) => setOrderData({...orderData, order_product_name:e.target.value})} className="form-control text-capital" id="exampleInputEmail1" aria-describedby="emailHelp" required Focus />     
+            <input type="text" name='order_product_name' placeholder='Enter Name' value={orderData.order_product_name} autoComplete='off' onChange={(e) => setOrderData({...orderData, order_product_name:e.target.value})} className="form-control text-capital" id="exampleInputEmail1" aria-describedby="emailHelp" />     
               </div>
               
 
@@ -255,7 +255,7 @@ return alert(result.data.Error)
  
   <div className="col-md-2 d-none">
     <label  className="form-label text-dark h6">Order Quantity</label>
-                <input type="int" name='order_qty' value={orderData.order_qty} placeholder='Enter Qty' autoComplete='off' onChange={(e) => setOrderData({ ...orderData, order_qty: e.target.value })} className="form-control text-capital " id="exampleInputEmail1" aria-describedby="emailHelp" required /> 
+                <input type="int" name='order_qty' value={orderData.order_qty} placeholder='Enter Qty' autoComplete='off' onChange={(e) => setOrderData({ ...orderData, order_qty: e.target.value })} className="form-control text-capital " id="exampleInputEmail1" aria-describedby="emailHelp" /> 
 
   </div>
  
@@ -278,7 +278,7 @@ return alert(result.data.Error)
 
              <div className=" col-md-2 d-none">
     <label className="form-label text-dark h6">Order Date</label>
-            <input type="text" name='order_date' value={orderData.order_date} placeholder='order date' autoComplete='off' onChange={(e) => setOrderData({...orderData, order_date:e.target.value})} className="form-control text-capital" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+            <input type="text" name='order_date' value={orderData.order_date} placeholder='order date' autoComplete='off' onChange={(e) => setOrderData({...orderData, order_date:e.target.value})} className="form-control text-capital" id="exampleInputEmail1" aria-describedby="emailHelp" />
   </div>
 
             

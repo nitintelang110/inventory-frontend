@@ -106,4 +106,42 @@ width: 85%;
 
       box-shadow: none; 
    }
+  @media screen and (max-width:720px){
+   
+.mainsection{
+   background-color: rgb(237, 241, 242);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 90%;
+   margin-left: 5%;
+   margin-top: 15%;
+  box-shadow: 1px 2px 5px rgb(0, 0, 0);
+ 
+    /*background-image: url("../../assets/login/backwalls.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+.leftside{
+ 
+   width: 100%;
+   min-height: 20vh; 
   
+}
+.rightside{
+   padding: 20px;
+   width: 100%;
+   
+}
+img{
+display: none;
+}
+
+.form{
+   padding: 20px 20px; 
+   border-radius: 5px;
+   width: 100%;
+   
+}
+  }

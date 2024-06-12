@@ -26,9 +26,6 @@ if (month < 10) {
  //date end
 
 
- 
-
-  
   const [addRows, setAddRows] = useState(false);
   const [partyData,setPartyData] = useState([]);
   const [category, setCategory] = useState([]);
@@ -36,18 +33,15 @@ if (month < 10) {
   const [partyNameTrue, setPartyNameTrue] = useState(false)
   
 
-
-  
      let randomInteger = `${ Math.floor(Math.random() * 100000) + 1
 }`;
     
+   
+     
+  const [formData, setFormData] = useState([{ order_product_name: '', order_qty: '', rcd_order_qty: 0, order_date: fullDate, order_status: 'NO', order_category: '', order_party:partyName,order_remark:'',order_no:randomInteger}]);
+  console.log(formData)
 
-    
 
-  const [formData, setFormData] = useState([{ order_product_name: '', order_qty: '', rcd_order_qty: 0, order_date: fullDate, order_status: 'NO', order_category: '', order_party:'',order_remark:'',order_no:randomInteger}]);
-
-  
-  
 
   const Navigate = useNavigate();
 
@@ -61,7 +55,7 @@ if (month < 10) {
 
   const addRow = () => {
    
-    setFormData([...formData, {order_product_name:'', order_qty:'', rcd_order_qty: 0, order_date:fullDate, order_status:'NO',order_category:'',order_party:'',order_remark:'',order_no:randomInteger }]);
+    setFormData([...formData, {order_product_name:'', order_qty:'', rcd_order_qty: 0, order_date:fullDate, order_status:'NO',order_category:'',order_party:partyName,order_remark:'',order_no:randomInteger }]);
     if (formData.length >= 1) {
       setAddRows(true)
         
@@ -80,10 +74,9 @@ if (month < 10) {
   };
 
  
-
   const sendDataToServer = async () => {
     try {
-       await axios.post('http://localhost:8000/auth/addorder', formData).then((Status) => {
+        await axios.post('http://localhost:8000/auth/addorder', formData).then((Status) => {
         if (Status) {
           Swal.fire({ position: "center", icon: "success", title: "Submit Successfully!", timer: 1800, showConfirmButton: false });
           Navigate("/auth/admin/dashboard/getorder");
@@ -122,7 +115,7 @@ if (month < 10) {
 
 
 
-  },[])
+  },[formData])
 
   const partyAlert = () => {
     alert("Please Select Party Name")
@@ -151,8 +144,8 @@ if (month < 10) {
       <div className={styles.head}><h5 className='mx-4'>ADD ORDER</h5></div>
 
       <div className={styles.partContainer}>
-     
-        <select className={styles.part} value={partyName} onChange={(e) => setPartyName(e.target.value)} onClick={()=>setPartyNameTrue(true)}>
+    
+        <select className={styles.part} value={partyName.party} onChange={(e) => setPartyName(e.target.value)} onClick={()=>setPartyNameTrue(true)}>
                 <option onClick={()=>setPartyNameTrue(false)}>--SELECT PARTY--</option>
                 {partyData.map((c,id)=>{
                     return(
@@ -176,7 +169,7 @@ if (month < 10) {
       </div>
 
       {formData.map((data, index) => (
-        <div key={index} id={styles.rows} className="col-md-12 ">
+        <div key={index+1} id={styles.rows} className="col-md-12 ">
 
         <div className="col-md-12 d-flex flex-row">
 
@@ -194,14 +187,14 @@ if (month < 10) {
             required
            />
 
-         <input
+     { /*   <input
            type="text"
            className={styles.pname}
            name="order_party"
            value={partyName}
            onFocus={e => handleInputChange(index, e)}
            required
-         />
+         />*/}
 
           </div>
 

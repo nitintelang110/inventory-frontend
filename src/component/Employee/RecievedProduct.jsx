@@ -15,7 +15,8 @@ export const ReceivedProduct = () => {
    const [partyName, setPartyName] = useState(''); 
    const [orderNo,setOrderNo] = useState(''); 
   
-   
+  
+
    const [startDate,setStartDate] = useState('');
    const [endDate,setEndDate] = useState('');
 
@@ -282,6 +283,7 @@ export const ReceivedProduct = () => {
     };
 
 
+
   useEffect(()=>{
   
     axios.get("http://localhost:8000/auth/receivedproducts").then(result=>{
@@ -298,6 +300,13 @@ export const ReceivedProduct = () => {
   },[])
   
   const handleDelete = (id) => {
+
+    axios.put("http://localhost:8000/auth/update_received_qty_in_pending_on_delete", employee)
+    .then(result => {
+      if (result) {
+       ""
+    } })
+  .catch(err=>{console.log(err)})
   
     axios.delete("http://localhost:8000/auth/deletereceivedproduct/"+id).then(result => {
       if (result.data.Status) {
